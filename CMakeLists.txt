@@ -1,6 +1,3 @@
-cmake_minimum_required(VERSION 3.14.0)
-
-project(nanopb VERSION 0.4.9.1 LANGUAGES C)
 
 set(nanopb_VERSION_STRING ${PROJECT_NAME}-${${PROJECT_NAME}_VERSION}-dev)
 set(nanopb_SOVERSION 0)
@@ -25,8 +22,6 @@ endif()
 if(NOT DEFINED CMAKE_DEBUG_POSTFIX)
     set(CMAKE_DEBUG_POSTFIX "d")
 endif()
-
-include(GNUInstallDirs)
 
 if(MSVC AND nanopb_MSVC_STATIC_RUNTIME)
     foreach(flag_var
